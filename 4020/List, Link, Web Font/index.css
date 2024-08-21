@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Rubik;
+    src: url(rubik/Rubik-Regular.ttf);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0 0 1em;
+}
+
+ul li {
+    padding-left: 2rem;
+    background-image: url(https://picsum.photos/15);
+    background-position: 0 0;
+    background-size: 1rem 1rem;
+    background-repeat: no-repeat;
+}
+
+a {
+    display: inline-block;
+    transition: transform 0.25s;
+}
+
+a:hover {
+    cursor: crosshair;
+    color: deeppink;
+    transform: rotate(0.25turn);
+}
+
+a:active {
+    color: cornflowerblue;
+    background-color: black;
+    transform: rotate(0.5turn);
+}
+
+a:visited {
+    color: salmon;
+}
+
+a:nth-of-type(5) {
+    border-radius: 50px;
+    border: 20px ridge blue;
+}
+
+a:nth-of-type(6) {
+    text-decoration: overline;
+}
+
+p {
+    font-family: "Rubik";
+}

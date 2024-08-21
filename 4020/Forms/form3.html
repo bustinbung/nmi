@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header style="font-size: 24px;">
+        Form Practice
+    </header>
+    
+    <main>
+        <form action="showme.html" method="get">
+            <label for="salary">Salary:</label><br>
+            <input type="range" id="salary" name="salary"
+                   min="0"
+                   max="500000"
+                   step="1000"
+                   value="250000"><br>
+            <output for="salary" class="salary-output"></output><br>
+
+            <label for="favColor">Favorite color:</label><br>
+            <input type="color" id="favColor" name="favColor" value="#ffffff"><br>
+
+            <input type="submit">
+        </form>
+    </main>
+
+    <script>
+        const salary = document.querySelector("#salary");
+        const salaryOutput = document.querySelector(".salary-output");
+
+        salaryOutput.textContent = salary.value;
+
+        salary.addEventListener("input", () => {
+            salaryOutput.textContent = salary.value;
+        })
+
+        const favColor = document.querySelector("#favColor");
+        const body = document.querySelector("body");
+
+        body.style.backgroundColor = favColor.value;
+
+        favColor.addEventListener("input", () => {
+            body.style.backgroundColor = favColor.value;
+        })
+    </script>
+</body>
+</html>

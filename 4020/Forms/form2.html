@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header style="font-size: 24px;">
+        Form Practice
+    </header>
+    
+    <main>
+        <form action="showme.html" method="get">
+            <label for="colors">Colors:</label><br>
+            <select id="colors" name="colors">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+            </select><br>
+
+            <label for="browsers">Browsers:</label><br>
+            <input type="text" list="browsers">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist><br>
+
+            <fieldset>
+                <legend>Operating System:</legend>
+                <input type="radio" id="linux" name="os" value="linux">
+                <label for="os">Linux</label>
+                <input type="radio" id="macos" name="os" value="macos">
+                <label for="macos">MacOS</label>
+                <input type="radio" id="win" name="os" value="win">
+                <label for="win">Windows</label>
+            </fieldset><br>
+
+            <label for="credithours">Number of credit hours this semester:</label><br>
+            <input type="number" id="numCreditHours" name="numCreditHours"><br>
+
+            <input type="submit">
+        </form>
+    </main>
+</body>
+</html>

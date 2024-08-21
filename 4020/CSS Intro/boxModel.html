@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+        .chela-one-regular {
+            font-family: "Chela One", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background: linear-gradient(pink, blue);
+            /* background: radial-gradient(red, orange); */
+            background-repeat: no-repeat;
+
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        header::first-letter {
+            font-size: 44px;
+        }
+
+        header::first-line {
+            /* color: #ff0000; */
+            color: rgba(255, 0, 0, 1);
+        }
+
+        h2 {
+            margin-top: 100px;
+            transform: rotate(10deg);
+        }
+
+        p {
+            font-family: "Chela One";
+            font-size: larger;
+            padding: 1.5em;
+            width: fit-content;
+        }
+
+        .example1 {
+            background-color: #9EB668;
+            border: 10px groove #0B00B8;
+            border-radius: 20px;
+            animation: rotate 5s linear none infinite;
+        }
+
+        .example2 {
+            background: linear-gradient(#3C3A2B, #DC1B25);
+            color: #E9E5E5;
+            text-shadow: #767970 3px 3px;
+            border: 10px dashed #0B00B8;
+            border-radius: 20px;
+            background-clip: padding-box;
+            margin-left: 20px;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0turn);
+            }
+
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Elements</h1>
+    
+    <header>
+        It was the best of times, <br> it was the worst of times.
+    </header>
+
+    <h2>Rotation Example</h2>
+
+    <p class="example1">Example one of border, padding, etc.</p>
+    <p class="example2">Example two of border, padding, etc.</p>
+</body>
+</html>
