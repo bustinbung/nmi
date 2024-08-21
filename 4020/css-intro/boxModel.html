@@ -50,7 +50,12 @@
             background-color: #9EB668;
             border: 10px groove #0B00B8;
             border-radius: 20px;
-            animation: rotate 5s linear none infinite;
+            animation: rotate 5s linear infinite;
+            animation-play-state: paused;
+        }
+
+        .example1:hover {
+            animation-play-state: running;
         }
 
         .example2 {
