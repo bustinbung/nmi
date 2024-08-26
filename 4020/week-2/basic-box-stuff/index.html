@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Box Stuff</title>
+</head>
+<body>
+    <div id="central"></div>
+    <a href="https://google.com">Google</a><br>
+    <button>Click Me</button>
+
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        #central {
+            width: 30rem;
+            height: 30rem;
+
+            background: radial-gradient(circle, rgba(82,202,255,1) 0%, rgba(96,255,104,1) 100%);
+
+            border-radius: 100%;
+        }
+
+        a {
+            font-size: 1.5rem;
+        }
+
+        a:hover {
+            border: 15px solid black;
+        }
+    </style>
+</body>
+<script>
+    const button = document.querySelector("button");
+    const central = document.querySelector("#central");
+    let flipped = false;
+    let clicked = false;
+    let numClicked = 0;
+
+    button.onclick = () => {
+        numClicked++;
+
+        switch (numClicked) {
+            case 1:
+                button.innerText = "Again!"
+                break;
+            case 3:
+                button.innerText = "Are you having fun?"
+                break;
+            case 10:
+                button.innerText = "Are you going to keep going?"
+            case 25:
+                button.innerText = "Don't you think that's enough?"
+                break;
+            case 50:
+                button.innerText = "I quit.";
+                break;
+        }
+
+        if (flipped == false && numClicked <= 50) {
+            central.style.background = "radial-gradient(circle, rgba(96,255,104,1) 0%, rgba(82,202,255,1) 100%)"
+        } else if (flipped == true && numClicked <= 50) {
+            central.style.background = "radial-gradient(circle, rgba(82,202,255,1) 0%, rgba(96,255,104,1) 100%)"
+        }
+
+        flipped = !flipped;
+    }
+</script>
+</html>
