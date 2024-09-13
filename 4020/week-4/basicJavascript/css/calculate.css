@@ -1,0 +1,48 @@
+@font-face {
+    font-family: DS-Digital;
+    src: url(../fonts/ds_digital/DS-DIGII.TTF);
+    font-style: italic;
+}
+
+.calc-body {
+    display: grid;
+    grid-template: repeat(5, 50px) / repeat(4, 50px);
+    gap: 10px;
+
+    margin: auto;
+    width: fit-content;
+
+    background-color: #aaa;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#calcScreen {
+    font-family: 'DS-Digital', monospace;
+    font-style: italic;
+    font-size: xx-large;
+    text-align: right;
+
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 0px;
+    border: 1px ridge #222;
+
+    box-shadow: 2px 2px 0px #888;
+
+    background-color: #ddd;
+}
+
+.active {
+    background-color: #999;
+    position: relative;
+    top: 2px;
+    left: 2px;
+
+    box-shadow: revert;
+}
