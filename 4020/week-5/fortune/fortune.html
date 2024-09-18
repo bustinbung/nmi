@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fortune.css">
     <title>Fortune Teller</title>
 </head>
 <body>
-    <input type="text" id="namehere" placeholder="Your name here"><br>
-    <div id="result"></div>
+    <main>
+        <img src="fortune-tellers-hands.webp">
+        <div id="result"></div>
+        <div class="form">
+            <input type="text" id="namehere" placeholder="Your name here"><br>
+            <button onclick="fortune()">Your fortune</button>
+        </div>
+    </main>
 </body>
 </html>
 <script>
-    const outcomes = ['win the lottery this week.', ]
+    const outcomes = ['win the lottery this week.', 'get sunburnt on a trip to Hawaii.', 'reconnect with an old friend.', 'learn some terrible news.', 'trip.'];
+
+    function fortune() {
+        const name = document.querySelector('#namehere').value;
+        const item = Math.floor(Math.random() * outcomes.length);
+
+        const result = document.querySelector('#result');
+        result.innerHTML = name + ", your fortune is that you will " + outcomes[item];
+    }
 </script>
