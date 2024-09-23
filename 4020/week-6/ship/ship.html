@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+ <link rel="stylesheet" href="ship.css">
+</head>
+
+<body>
+    <button onclick="reverse()">Reverse</button>
+    <button onclick="rotate(10)">Rotate</button>
+    <div id="ship">
+        <div id="shipLight"></div>
+    </div>
+</body>
+</html>
+<script>
+    let ship = document.querySelector('#ship');
+    let shipLight = document.querySelector('#shipLight')
+    let shipPosition = 0;
+    let lightBlink = 0;
+    let speed = 5;
+    let rotation = 0;
+    let currentScale = 'scale(1, 1)';
+    let currentRotation = `rotateZ(${rotation}deg)`;
+
+    setInterval(function() {
+        if (shipPosition > 1000) {
+            shipPosition = -300;
+        } else if (shipPosition < -300) {
+            shipPosition = 1000;
+        }
+        shipPosition += speed;
+        ship.style.left = shipPosition + 'px';
+
+        if (lightBlink == 25) {
+            shipLight.style.backgroundColor = 'black';
+        }
+
+        if (lightBlink == 50) {
+            shipLight.style.backgroundColor = 'red';
+            lightBlink = 0;
+        }
+        lightBlink++;
+    }, 10);
+
+    function reverse() {
+        speed *= -1;
+        if (speed < 0) {
+            currentScale = 'scale(-1, 1)';
+        } else {
+            currentScale = 'scale(1, 1)';
+        }
+
+        updateTransform();
+    }
+
+    function rotate(deg) {
+        rotation += deg;
+        currentRotation = `rotateZ(${rotation}deg)`;
+        updateTransform();
+    }
+
+    function updateTransform() {
+        ship.style.transform = `${currentRotation} ${currentScale}`;
+    }
+    updateTransform();
+</script>

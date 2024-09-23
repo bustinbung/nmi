@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control CSS with JS</title>
+    <style>
+        #square {
+            background-color: black;
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+    </style>
+    <script src="js/index.js" async></script>
+</head>
+<body>
+    <div id="square"></div>
+    <button onclick="changeCSS('red', '90%')">red, 90%</button>
+    <button onclick="changeCSS('blue', '30%')">blue, 30%</button>
+    <button onclick="changeCSS('yellow', '5%', '50px', '100px', '30deg')">yellow, 5%, 50px, 100px, 30deg</button>
+</body>
+</html>
