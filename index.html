@@ -3,12 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NMI Coursework</title>
+    <title>NMIX Coursework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+        body {
+            padding-inline: 20%;
+            font-family: "Moderustic", sans-serif;
+            background-color: #ccc;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            margin-block: 20px;
+        }
+
+        main > h1 {
+            margin-top: 0;
+        }
+
+        footer {
+            margin-block: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <script type="module">
+        import { request } from "https://esm.sh/@octokit/request";
+        import TimeAgo from "https://esm.sh/javascript-time-ago";
+        import en from "https://esm.sh/javascript-time-ago/locale/en";
+
+        TimeAgo.addDefaultLocale(en);
+
+        const timeAgo = new TimeAgo('en-US');
+        const apiResponse = await request("GET /repos/bustinbung/nmi/branches/main");
+
+        const timeString = timeAgo.format(new Date(apiResponse.data.commit.commit.committer.date));
+        const p = document.querySelector("#last-commit").innerText = `Last commit: ${timeString}`;
+    </script>
 </head>
 <body>
-    <h1>NMI Coursework</h1>
-    <ul>
-        <li><a href="4020/index.html">NMIX 4020</a></li>
-    </ul>
-</body>
+    <main>
+        <h1>NMIX Coursework</h1>
+
+        <hr>
+        
+        <h2><a href="4020/index.html">NMIX 4020</a></h2>
+    </main>
+
+    <footer>
+        <p>Published to <a href="https://github.com/bustinbung/nmi">GitHub</a>, deployed by <a href="https://vercel.com">Vercel</a>.</p>
+        <p id="last-commit">The last commit was ...</p>
+    </footer>
+    </body>
 </html>

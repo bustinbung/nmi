@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshows {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.buttons > div{
+    margin-block: 10px;
+}
