@@ -1,0 +1,48 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Coursework",
+    "description": "Exercises for NMIX 4020",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "path": {
+                "type": "string"
+            },
+            "displayName": {
+                "type": "string"
+            },
+            "modules": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "displayName": {
+                            "type": "string"
+                        },
+                        "parentFolder": {
+                            "type": "string"
+                        },
+                        "exercises": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "displayName": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": ["url", "displayName"]
+                            }
+                        }
+                    },
+                    "required": ["displayName", "exercises"]
+                }
+            }
+        },
+        "required": ["path", "displayName", "exercises"]
+    }
+}

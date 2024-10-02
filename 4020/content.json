@@ -1,0 +1,196 @@
+[
+    {
+        "path": "week-1",
+        "displayName": "Week 1",
+        "modules": [
+            {
+                "displayName": "Lists, Links, and Web Fonts",
+                "exercises": [
+                    {
+                        "url": "list-link-font/index.html",
+                        "displayName": "Exercises 1-4"
+                    }
+                ]
+            },
+            {
+                "displayName": "Forms",
+                "parentFolder": "forms",
+                "exercises": [
+                    {
+                        "url": "form1.html",
+                        "displayName": "Form 1"
+                    },
+                    {
+                        "url": "form2.html",
+                        "displayName": "Form 2"
+                    },
+                    {
+                        "url": "form3.html",
+                        "displayName": "Form 3"
+                    },
+                    {
+                        "url": "jform.html",
+                        "displayName": "JavaScript Form"
+                    }
+                ]
+            },
+            {
+                "displayName": "CSS Intro",
+                "exercises": [
+                    {
+                        "url": "css-intro/boxModel.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-2",
+        "displayName": "Week 2",
+        "modules": [
+            {
+                "displayName": "CSS Text Styling",
+                "exercises": [
+                    {
+                        "url": "css-text-styling/index.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Basic Box Stuff",
+                "exercises": [
+                    {
+                        "url": "basic-box-stuff/index.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-3",
+        "displayName": "Week 3",
+        "modules": [
+            {
+                "displayName": "Flexbox",
+                "parentFolder": "flexbox",
+                "exercises": [
+                    {
+                        "displayName": "Exercise 0",
+                        "url": "flexbox0.html"
+                    },
+                    {
+                        "displayName": "Exercise 1: Wrapping",
+                        "url": "flexbox1.html"
+                    },
+                    {
+                        "displayName": "Exercise 2: Flexible Sizing",
+                        "url": "flexbox2.html"
+                    },
+                    {
+                        "displayName": "Exercise 3: Horizontal and Vertical Alignment",
+                        "url": "flexbox3.html"
+                    },
+                    {
+                        "displayName": "Exercise 4: Nested Flex Boxes",
+                        "url": "flexbox4.html"
+                    }
+                ]
+            },
+            {
+                "displayName": "Project 1",
+                "exercises": [
+                    {
+                        "displayName": "F1 Driver Records",
+                        "url": "project-1/index.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-4",
+        "displayName": "Week 4",
+        "modules": [
+            {
+                "displayName": "Calculate",
+                "exercises": [{
+                    "url": "basicJavascript/calculate.html",
+                    "displayName": "Exercises"
+                }]
+            },
+            {
+                "displayName": "Arrays",
+                "exercises": [
+                    {
+                        "url": "candidates/candidates.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-5",
+        "displayName": "Week 5",
+        "modules": [
+            {
+                "displayName": "Slideshow",
+                "exercises": [
+                    {
+                        "url": "slideshow/candidates2.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Fortune Teller",
+                "exercises": [
+                    {
+                        "url": "fortune/fortune.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Conditionals",
+                "exercises": [
+                    {
+                        "url": "conditional/conditional.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-6",
+        "displayName": "Week 6",
+        "modules": [
+            {
+                "displayName": "Controlling CSS with JS",
+                "exercises": [
+                    {
+                        "url": "js-css/index.html",
+                        "displayName": "Exercises"
+                    },
+                    {
+                        "url": "ship/ship.html",
+                        "displayName": "Spaceship Exercise"
+                    }
+                ]
+            },
+            {
+                "displayName": "Project 2",
+                "exercises": [
+                    {
+                        "displayName": "Three Candidate Slideshow",
+                        "url": "project-2/index.html"
+                    }
+                ]
+            }
+        ]
+    }
+]
