@@ -35,6 +35,10 @@
             padding: 20px;
             margin-block: 20px;
         }
+        
+        main > h2 {
+            scroll-margin-top: 30px;
+        }
 
         h1 {
             margin-top: 0;
@@ -65,10 +69,17 @@
         import content from './content.json' with {type: "json"};
 
         // for each week...
-        for ([week, index] of content) {
+        // not using for...of because index is needed to omit <hr> on final iteration...
+        for (const i in content) {
+            // so set week here using bracket notation
+            const week = content[i];
+
+            // like using <div> without the extra <div>
             const fragment = document.createDocumentFragment();
 
+            // ex: "Week 1"
             const weekHeading = document.createElement('h2');
+            // id necessary for TOC navigation
             weekHeading.id = week.path;
             weekHeading.innerText = week.displayName;
 
@@ -76,6 +87,7 @@
 
             // for each module...
             for (const module of week.modules) {
+                // ex: "CSS Intro"
                 const moduleHeading = document.createElement('h3');
                 moduleHeading.innerText = module.displayName;
 
@@ -86,7 +98,9 @@
                 for (const exercise of module.exercises) {
                     const exerciseItem = document.createElement('li');
                     
+                    // would love to use const here, but initializing within if block leads to scope issues
                     let exercisePath;
+                    // 'parentFolder' property used for multi-exercise modules
                     if (module.hasOwnProperty('parentFolder')) {
                         exercisePath = `${week.path}/${module.parentFolder}/${exercise.url}`
                     } else {
@@ -101,8 +115,17 @@
                 fragment.appendChild(exerciseList);
             }
 
-            fragment.appendChild(document.createElement('hr'));
+            // omit <hr> on final week
+            if (i < content.length - 1) {
+                fragment.appendChild(document.createElement('hr'));
+            }
+
             document.querySelector('main').appendChild(fragment);
+
+            // nav links
+            const navWeekItem = document.createElement('li');
+            navWeekItem.innerHTML = `<a href=#${week.path}>${week.displayName}</a>`;
+            document.querySelector('nav > ul').appendChild(navWeekItem);
         }
     </script>
 </head>
