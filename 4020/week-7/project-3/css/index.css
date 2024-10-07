@@ -1,0 +1,27 @@
+@import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    background-color: gray;
+    padding-inline: 15%;
+    font-family: "Jersey 10", sans-serif;
+    font-size: x-large;
+}
+
+.content {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+
+.buttons > button {
+    margin-block: 10px;
+}
+
+img {
+    object-fit: contain;
+}

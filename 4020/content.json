@@ -192,5 +192,53 @@
                 ]
             }
         ]
+    },
+    {
+        "path": "week-7",
+        "displayName": "Week 7",
+        "modules": [
+            {
+                "displayName": "Objects, Nested Arrays, and More",
+                "exercises": [
+                    {
+                        "url": "objects/classlist.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Project 3",
+                "exercises": [
+                    {
+                        "url": "project-3/index.html",
+                        "displayName": "Make an Object"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-8",
+        "displayName": "Week 8",
+        "modules": [
+            {
+                "displayName": "Nested Objects",
+                "exercises": [
+                    {
+                        "url": "nested/nested.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Let's Play Cards",
+                "exercises": [
+                    {
+                        "url": "cards/cards.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
     }
 ]
