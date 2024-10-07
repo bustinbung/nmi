@@ -43,6 +43,6 @@
                 }
             }
         },
-        "required": ["path", "displayName", "exercises"]
+        "required": ["path", "displayName", "modules"]
     }
 }
