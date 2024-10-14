@@ -1,0 +1,19 @@
+section {
+    display: flex;
+    border: 2px solid black;
+    margin-block: 30px;
+    padding: 10px;
+}
+
+img {
+    max-height: 300px;
+    max-width: 500px;
+}
+
+h2 {
+    margin-block: 10px;
+}
+
+section > span {
+    color: gray;
+}

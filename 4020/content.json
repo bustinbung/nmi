@@ -238,6 +238,15 @@
                         "displayName": "Exercises"
                     }
                 ]
+            },
+            {
+                "displayName": "Project 4",
+                "exercises": [
+                    {
+                        "url": "corona/corona.html",
+                        "displayName": "Covid Blues"
+                    }
+                ]
             }
         ]
     }
