@@ -1,5 +1,6 @@
 section {
     display: flex;
+    justify-content: space-between;
     border: 2px solid black;
     margin-block: 30px;
     padding: 10px;
@@ -16,4 +17,8 @@ h2 {
 
 section > span {
     color: gray;
+}
+
+section > div {
+    flex-basis: 50%;
 }

@@ -28,25 +28,27 @@ for (const article of data) {
     div.append(heading, subheading, description);
     container.appendChild(div);
 
-    // check if image exists before creating
     const img = document.createElement('img');
+    img.src = article.urlToImage;
+    container.appendChild(img);
     
-    if (article.urlToImage != null) {
-            fetch(article.urlToImage, {
-                method: 'head'
-            })
-                .then((response) => {
-                    if (response.ok == false) {
-                        return;
-                    }
+    // couldn't get this to work consistently, some errors with CORS
+    // if (article.urlToImage != null) {
+    //         fetch(article.urlToImage, {
+    //             method: 'head'
+    //         })
+    //             .then((response) => {
+    //                 if (response.ok == false) {
+    //                     return;
+    //                 }
 
-                    img.src = article.urlToImage;
-                    container.appendChild(img);
-                })
-                .catch((error) => {
-                    console.warn(error.message)
-                })
-    }
+    //                 img.src = article.urlToImage;
+    //                 container.appendChild(img);
+    //             })
+    //             .catch((error) => {
+    //                 console.warn(error.message)
+    //             })
+    // }
 
     fragment.appendChild(container);
 }
