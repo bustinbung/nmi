@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia</title>
     <script src="js/trivia.js" defer></script>
-    <style>
-        button {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="css/trivia.css">
 </head>
 <body>
-    <button onclick="newQuestion()">New Question</button>
-    <div id="category"></div>
-    <div id="question"></div>
-    <button onclick="showAnswer()">Show Answer</button>
-    <div id="answer"></div>
+    <main>
+        <button onclick="newQuestion()">New Question</button>
+        <div id="category"></div>
+        <div id="question"></div>
+        <button onclick="showAnswer()">Show Answer</button>
+        <div id="answer"></div>
+    </main>
 </body>
 </html>

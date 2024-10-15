@@ -1,0 +1,9 @@
+main {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20%;
+}
+
+button {
+    display: block;
+}

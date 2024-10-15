@@ -22,5 +22,5 @@ async function newQuestion() {
 }
 
 async function showAnswer() {
-
+    document.querySelector('#answer').innerText = theAnswer;
 }
