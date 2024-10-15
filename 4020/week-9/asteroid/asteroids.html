@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids</title>
+    <!-- Using JS fetch() instead of AJAX, so no need for jQuery -->
+    <!-- See: https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch -->
+    <script src="asteroids.js" defer></script>
+    <style>
+        /* pseudo-element that handles inner circle */
+        div::after {
+            content: '';
+            border-radius: 50%;
+            /* using CSS variables so we can set values via JS, but not exactly elegant */
+            background-color: var(--inner-color, gray);
+            width: var(--min-width, 0);
+            height: var(--min-width, 0);
+            z-index: 2;
+            /* required for z-index property */
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="count"></div> -->
+    <div id="asteroid-list"></div>
+    <!-- <div id="show-data"></div> -->
+</body>
+</html>

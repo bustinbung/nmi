@@ -249,5 +249,29 @@
                 ]
             }
         ]
+    },
+    {
+        "path": "week-9",
+        "displayName": "Week 9",
+        "modules": [
+            {
+                "displayName": "Asteroids",
+                "exercises": [
+                    {
+                        "url": "asteroid/asteroid.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Trivia",
+                "exercises": [
+                    {
+                        "url": "trivia/trivia.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
     }
 ]
