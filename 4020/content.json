@@ -286,5 +286,20 @@
                 ]
             }
         ]
+    },
+    {
+        "path": "week-10",
+        "displayName": "Week 10",
+        "modules": [
+            {
+                "displayName": "Intro to Vue.js",
+                "exercises": [
+                    {
+                        "url": "vueOne/index.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
     }
 ]
