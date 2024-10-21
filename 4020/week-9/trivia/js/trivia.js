@@ -16,6 +16,11 @@ async function newQuestion() {
             return response.json();
         })
 
+    // reset contents after data has been fetched to avoid flashing
+    questionDiv.innerText = '';
+    categoryDiv.innerText = '';
+    answerDiv.innerText = '';
+
     questionDiv.innerText = data[0].question.text;
     categoryDiv.innerText = `Category: ${data[0].category}`;
     theAnswer = data[0].correctAnswer;

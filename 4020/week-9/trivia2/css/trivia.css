@@ -4,11 +4,12 @@ main {
     gap: 50px;
 }
 
-button {
+.question-button {
     display: block;
     width: 100px;
     height: 100px;
     margin-block: 30px;
+    flex-shrink: 0;
 }
 
 .text {

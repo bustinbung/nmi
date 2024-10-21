@@ -268,7 +268,20 @@
                 "exercises": [
                     {
                         "url": "trivia/trivia.html",
-                        "displayName": "Exercises"
+                        "displayName": "Part 1"
+                    },
+                    {
+                        "url": "trivia2/trivia.html",
+                        "displayName": "Part 2"
+                    }
+                ]
+            },
+            {
+                "displayName": "Project 5",
+                "exercises": [
+                    {
+                        "url": "jukebox/index.html",
+                        "displayName": "Jukebox"
                     }
                 ]
             }

@@ -9,11 +9,17 @@
 </head>
 <body>
     <main>
-        <button onclick="newQuestion()">New Question</button>
-        <div id="category"></div>
-        <div id="question"></div>
-        <button onclick="showAnswer()">Show Answer</button>
-        <div id="answer"></div>
+        <div class="buttons">
+            <button onclick="newQuestion()">New Question</button>
+            <button onclick="showAnswer()">Show Answer</button>
+        </div>
+        <div class="text">
+            <div class="question-wrapper">
+                <div id="category"></div>
+                <div id="question"></div>
+            </div>
+            <div id="answer"></div>
+        </div>
     </main>
 </body>
 </html>
