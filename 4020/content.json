@@ -299,6 +299,20 @@
                         "displayName": "Exercises"
                     }
                 ]
+            },
+            {
+                "displayName": "Vue Part II",
+                "parentFolder": "vueTwo",
+                "exercises": [
+                    {
+                        "url": "index.html",
+                        "displayName": "Classmates"
+                    },
+                    {
+                        "url": "cats.html",
+                        "displayName": "Cats"
+                    }
+                ]
             }
         ]
     }

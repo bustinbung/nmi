@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    <div id="us">
+        <!-- <h2 v-for="student in yall">{{student.stu_name}} {{student.last_name}}</h2>
+        <p v-for="student in yall">{{student.fact}}</p>
+        <img v-for="student in yall" :src="`https://${student.domain}/images/me.jpg`"> -->
+
+        <!-- <button v-on:click="showPic">Classmates</button>
+        <h2>{{stuname}}</h2> -->
+
+        <select v-model="oswald" v-on:change="displayImage">
+            <option v-for="student in yall" :value="`https://${student.domain}/images/me.jpg`">{{student.stu_name}}</option>
+        </select>
+        <p>{{oswald}}</p>
+        <img :src="image">
+    </div>
+</body>
+</html>

@@ -1812,6 +1812,10 @@ input, select, textarea {
 			padding-left: 0.25em;
 		}
 
+	#list ul li {
+		width:fit-content;
+	}
+
 /* Icons */
 
 	ul.icons {
@@ -2632,3 +2636,12 @@ input, select, textarea {
 				}
 
 	}
+
+.function-div {
+	width: 300px;
+	height: 300px;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
