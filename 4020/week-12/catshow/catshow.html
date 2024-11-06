@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux&family=Wittgenstein:wght@400..900&display=swap');
+
+        body {
+            padding-inline: 8%;
+            font-family: "Wittgenstein", serif;
+        }
+
+        img {
+            width: 500px;
+        }
+
+        button {
+            width: 80px;
+            background-color: grey;
+            color: white;
+            padding: 8px;
+            border-radius: 12px;
+            border: solid black 4px;
+            font-family: inherit;
+            margin-block: 10px;
+        }
+
+        .bar {
+            height: 20px;
+            background-color: gray;
+        }
+
+        .warn {
+            background-color: red;
+        }
+
+        .ok {
+            background-color: green;
+        }
+
+        .bars {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .labels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .labels > p {
+            height: 20px;
+            margin: 0;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .slideshow {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-block: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Containing element, Vue attaches here -->
+    <div id="slideshow">
+        <!-- Iterate over Vue 'breeds' array to generate slideshow componenent -->
+        <!-- <slideshow> accepts a 'breed' prop -->
+        <slideshow v-for="breed in breeds" :breed="breed" class="slideshow"></slideshow>
+    </div>
+</body>
+<script src="catshow.js"></script>
+
+</html>

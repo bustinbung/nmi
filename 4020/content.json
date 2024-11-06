@@ -313,6 +313,82 @@
                         "displayName": "Cats"
                     }
                 ]
+            },
+            {
+                "displayName": "Vue Part III",
+                "exercises": [
+                    {
+                        "url": "vueThree/youguys.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-11",
+        "displayName": "Week 11",
+        "modules": [
+            {
+                "displayName": "Vue Part IV",
+                "exercises": [
+                    {
+                        "url": "vueFour/component.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Vue Part V",
+                "parentFolder": "vueFive",
+                "exercises": [
+                    {
+                        "url": "computed1/computed.html",
+                        "displayName": "Full Name"
+                    },
+                    {
+                        "url": "computed2/studentDemo.html",
+                        "displayName": "Students Demo"
+                    }
+                ]
+            },
+            {
+                "displayName": "Dawgs API",
+                "parentFolder": "dogApi",
+                "exercises": [
+                    {
+                        "url": "dog.html",
+                        "displayName": "Exercises"
+                    },
+                    {
+                        "url": "slideshow/dog.html",
+                        "displayName": "Slideshow"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "path": "week-12",
+        "displayName": "Week 12",
+        "modules": [
+            {
+                "displayName": "Cats",
+                "exercises": [
+                    {
+                        "url": "cats/kitty.html",
+                        "displayName": "Exercises"
+                    }
+                ]
+            },
+            {
+                "displayName": "Project 6",
+                "exercises": [
+                    {
+                        "url": "catshow/catshow.html",
+                        "displayName": "Cat Components"
+                    }
+                ]
             }
         ]
     }

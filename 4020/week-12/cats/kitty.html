@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Cat Stuff</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap');
+
+        body {
+            padding-inline: 10%;
+            background-color: lightgray;
+            font-family: "Afacad Flux", sans-serif;
+        }
+
+        img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .cat {
+            display: flex;
+            gap: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-block: 10px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .info {
+            flex-shrink: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="cat" v-for="eachCat in catArray">
+            <div class="info">
+                <h1>{{eachCat.name}}</h1>
+                <p>{{eachCat.description}}</p>
+                <p>Temperament: {{eachCat.temperament}}</p>
+            </div>
+            <img :src="`https://cdn2.thecatapi.com/images/${eachCat.reference_image_id}.jpg`">
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="kitty.js"></script>
