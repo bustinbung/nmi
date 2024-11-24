@@ -6,13 +6,31 @@
   <title></title>
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <style>
+    .hand {
+      border: 1px solid black;
+      height: 258px;
+    }
+
+    body > div {
+      margin-block: 20px;
+      padding: 10px;
+      background-color: #972a27;
+    }
+
+    body {
+      background-color: #35654d;
+    }
+  </style>
 </head>
 <body>
-  <button onclick="shuffle()">shuffle</button><br>
-  <button onclick="replace()">replace</button><br>
+  <button onclick="shuffle(0)">shuffle 1</button>
+  <button onclick="shuffle(1)">shuffle 2</button><br>
+  <button onclick="replace(0)">replace 1</button>
+  <button onclick="replace(1)">replace 2</button><br>
   <button onclick="reset()">reset</button><br>
-  <div id="hand1"></div><br>
-  <div id="hand2"></div><br>
+  <div id="hand1" class="hand"></div>
+  <div id="hand2" class="hand"></div>
 </body>
 </html>
 <script src="js/cards.js"></script>

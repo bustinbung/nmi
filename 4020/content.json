@@ -258,7 +258,7 @@
                 "displayName": "Asteroids",
                 "exercises": [
                     {
-                        "url": "asteroid/asteroid.html",
+                        "url": "asteroid/asteroids.html",
                         "displayName": "Exercises"
                     }
                 ]
