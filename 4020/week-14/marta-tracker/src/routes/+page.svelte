@@ -1,21 +1,25 @@
 <script lang="ts">
-    import Pbf from 'pbf';
-    import { readAlert } from '$lib/gtfs-proto-schema';
     import { onMount } from 'svelte';
+    import { format, fromUnixTime } from 'date-fns';
 
-    onMount(() => {
+    import Map from '$lib/components/Map.svelte';
+
+    const center = [33.7820, -84.4495];
+    const zoom = 10.5;
+
+    let time = $state(new Date());
+
+    onMount(async () => {
         try {
-            const response = fetch(
-                'https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/vehicle/vehiclepositions.pb'
-            );
-
-            console.log(response);
-        } catch {
-            throw new Error('Failed');
+            const response = await fetch('/api/vehicles');
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error(error)
         }
     });
-
-    let obj = readAlert(new Pbf());
 </script>
 
 <h1>MARTA Real-time Transit Information</h1>
+<p>Timestamp: {format(time, 'MM/dd/yyyy HH:mm')}</p>
+<Map {center} {zoom}/>
