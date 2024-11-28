@@ -1,1 +1,0 @@
-import{a as o,t as r}from"../chunks/disclose-version.DgZSgyVa.js";import"../chunks/legacy.Q__x2tL0.js";var e=r("<h1>MARTA Real-time Transit Information</h1>");function m(a){var t=e();o(a,t)}export{m as component};
