@@ -391,5 +391,20 @@
                 ]
             }
         ]
+    },
+    {
+        "path": "week-14",
+        "displayName": "Week 14",
+        "modules": [
+            {
+                "displayName": "Final Project",
+                "exercises": [
+                    {
+                        "url": "marta-tracker/build/index.html",
+                        "displayName": "MARTA Tracker"
+                    }
+                ]
+            }
+        ]
     }
 ]
