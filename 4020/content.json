@@ -400,7 +400,7 @@
                 "displayName": "Final Project",
                 "exercises": [
                     {
-                        "url": "marta-tracker/build/index.html",
+                        "url": "https://marta-tracker-five.vercel.app/",
                         "displayName": "MARTA Tracker"
                     }
                 ]
