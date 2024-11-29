@@ -17,3 +17,5 @@ export const GET: RequestHandler = async ({ fetch }) => {
 	// Finally, we return the parsed data as a Response object.
 	return json(stops);
 };
+
+export const prerender = true;

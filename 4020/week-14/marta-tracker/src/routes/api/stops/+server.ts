@@ -11,3 +11,5 @@ export const GET: RequestHandler = async ({ fetch }) => {
 	const stops = Papa.parse(content, { header: true, dynamicTyping: true });
 	return json(stops);
 };
+
+export const prerender = true;
