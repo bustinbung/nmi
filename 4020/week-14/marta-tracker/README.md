@@ -1,38 +1,22 @@
-# sv
+# marta-tracker
+A web app that shows the real-time location of MARTA buses.
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Where to Start
+### Never touched Svelte(kit)?
+Start here, then move to src/routes/+page.svelte. I'll do my best to lead you from there.
 
-## Creating a project
+### I have some experience.
+You're on your own.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Technologies
+- [Svelte(Kit)](https://svelte.dev). UI and JS framework.
+- [OpenLayers](https://openlayers.org/). Map library.
+- [Papa Parse](https://www.papaparse.com/). Client-side CSV parsing library.
+- [pbf](https://github.com/mapbox/pbf). Lightweight protobuffer library.
+- [date-fns](https://date-fns.org/). Easy date manipulation.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Documentation
+The code for this project is documented to the best of my ability. The internet is your friend for anything you don't understand. If a file isn't littered with comments, it was either: a) auto-generated or b) not worth documenting.
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Warning
+This project will not be maintained after December 8th, 2024. Any large-scale issues or bugs that arise will not be fixed.
