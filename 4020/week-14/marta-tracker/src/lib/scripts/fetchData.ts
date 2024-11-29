@@ -4,34 +4,34 @@ To explore a specific API route, navigate to src/routes/api/ and find the +serve
 */
 
 export async function fetchVehicles() {
-    try {
-        const response = await fetch('/api/vehicles');
-        const vehicles = await response.json();
+	try {
+		const response = await fetch('/api/vehicles');
+		const vehicles = await response.json();
 
-        return vehicles
-    } catch (error) {
-        console.error(error)
-    }
+		return vehicles;
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 export async function fetchStops() {
-    try {
-        const response = await fetch('/api/stops');
-        const stops = await response.json();
+	try {
+		const response = await fetch('/api/stops');
+		const stops = await response.json();
 
-        return stops
-    } catch (error) {
-        console.error(error)
-    }
+		return stops;
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 export async function fetchRoutes() {
-    try {
-        const response = await fetch('/api/routes');
-        const stops = await response.json();
+	try {
+		const response = await fetch('/api/routes');
+		const stops = await response.json();
 
-        return stops
-    } catch (error) {
-        console.error(error)
-    }
+		return stops;
+	} catch (error) {
+		console.error(error);
+	}
 }

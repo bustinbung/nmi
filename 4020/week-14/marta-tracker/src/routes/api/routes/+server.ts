@@ -7,13 +7,13 @@ import type { RequestHandler } from './$types';
 
 // When a GET request is made to this endpoint, this function runs.
 export const GET: RequestHandler = async ({ fetch }) => {
-    // It fetches the corresponding .txt file from the static directory...
-    const response = await fetch('/marta-gtfs-static/routes.txt');
-    // ...parses the response body to text...
-    const content = await response.text()
+	// It fetches the corresponding .txt file from the static directory...
+	const response = await fetch('/marta-gtfs-static/routes.txt');
+	// ...parses the response body to text...
+	const content = await response.text();
 
-    // ...and passes it to Papa Parse, letting it know that the CSV has a header row and we want it to infer types from the data.
-    const stops = Papa.parse(content, { header: true, dynamicTyping: true });
-    // Finally, we return the parsed data as a Response object.
-    return json(stops);
-}
+	// ...and passes it to Papa Parse, letting it know that the CSV has a header row and we want it to infer types from the data.
+	const stops = Papa.parse(content, { header: true, dynamicTyping: true });
+	// Finally, we return the parsed data as a Response object.
+	return json(stops);
+};

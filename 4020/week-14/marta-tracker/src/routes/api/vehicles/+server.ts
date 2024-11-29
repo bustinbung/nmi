@@ -6,10 +6,13 @@ The actual protobuffer parsing is handled by the pbfRead function in src/lib/scr
 // Helper function from pbf package, generated at build time.
 import { readFeedMessage } from '$lib/scripts/gtfs-proto-schema';
 import { pbfRead } from '$lib/scripts/pbfRead';
-import type { RequestHandler } from "@sveltejs/kit";
+import type { RequestHandler } from '@sveltejs/kit';
 
 // When a GET request is made to this endpoint, this function runs.
 export const GET: RequestHandler = async () => {
-    // Returns a JSON Response from the function.
-    return pbfRead('https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/vehicle/vehiclepositions.pb', readFeedMessage);
-}
+	// Returns a JSON Response from the function.
+	return pbfRead(
+		'https://gtfs-rt.itsmarta.com/TMGTFSRealTimeWebService/vehicle/vehiclepositions.pb',
+		readFeedMessage
+	);
+};

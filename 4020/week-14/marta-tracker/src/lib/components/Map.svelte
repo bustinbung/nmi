@@ -49,8 +49,7 @@
     // In ms.
     let refreshInterval = 30000;
     // Similar to map. Because we're accessing this variable from within two different functions, we need it in the global scope.
-    let routes: { data: any[]; };
-
+	let routes: { data: any[] };
 
     // Create the base layer for the map.
     const osmLayer = new TileLayer({
@@ -92,7 +91,7 @@
                 features: busFeatureCollections[1]
             })
         })
-    ]
+	];
 
     // Okay, here's the main bulk of the logic. This function will update the map with the current vehicle locations.
     async function updateVehicleLocation(stopExecution: boolean = false, currentCollection: number = 0) {
@@ -106,12 +105,12 @@
             const feature = new Feature({
                 geometry: new Point(fromLonLat([vehicle.vehicle.position.longitude, vehicle.vehicle.position.latitude])),
                 // This is ugly, I know. Take it up with the GTFS standard.
-                name: vehicle.vehicle.vehicle.id,
+				name: vehicle.vehicle.vehicle.id
             });
 
             // Find the route that matches the current vehicle's route and save it.
             const route = routes.data.find((element) => {
-                return vehicle.vehicle.trip.route_id == element.route_id
+				return vehicle.vehicle.trip.route_id == element.route_id;
             });
 
             // Style declaration for the bus feature. Two icons, the bus icon itself and the shape that contains it.
@@ -126,18 +125,18 @@
                         anchorXUnits: 'fraction',
                         anchorYUnits: 'fraction',
                         // base64 encoded SVG for icon
-                        src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNiAzNC4xNSIgd2lkdGg9IjI2IiBoZWlnaHQ9IjM0LjE1Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICAgIHN0cm9rZTogIzAwMDsKICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdDogMTA7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMywuNUM2LjEuNS41LDYuMS41LDEzYzAsMTAuMjgsMTIuNSwyMC41MSwxMi41LDIwLjUxLDAsMCwxMi41LTEwLjIyLDEyLjUtMjAuNTFDMjUuNSw2LjEsMTkuOS41LDEzLC41WiIvPgogIDwvZz4KPC9zdmc+",
+						src: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNiAzNC4xNSIgd2lkdGg9IjI2IiBoZWlnaHQ9IjM0LjE1Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICAgIHN0cm9rZTogIzAwMDsKICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdDogMTA7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMywuNUM2LjEuNS41LDYuMS41LDEzYzAsMTAuMjgsMTIuNSwyMC41MSwxMi41LDIwLjUxLDAsMCwxMi41LTEwLjIyLDEyLjUtMjAuNTFDMjUuNSw2LjEsMTkuOS41LDEzLC41WiIvPgogIDwvZz4KPC9zdmc+',
                         // Rotation is expected to be in rads, but data returns deg, so do conversion
-                        rotation: vehicle.vehicle.position.bearing * ( Math.PI / 180 )
+						rotation: vehicle.vehicle.position.bearing * (Math.PI / 180)
                     })
                 }),
                 new Style({
                     image: new Icon({
                         scale: 0.3,
-                        src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIiB3aWR0aD0iNTcuNiIgaGVpZ2h0PSI1MS4yIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTI4OCAwQzQyMi40IDAgNTEyIDM1LjIgNTEyIDgwbDAgMTYgMCAzMmMxNy43IDAgMzIgMTQuMyAzMiAzMmwwIDY0YzAgMTcuNy0xNC4zIDMyLTMyIDMybDAgMTYwYzAgMTcuNy0xNC4zIDMyLTMyIDMybDAgMzJjMCAxNy43LTE0LjMgMzItMzIgMzJsLTMyIDBjLTE3LjcgMC0zMi0xNC4zLTMyLTMybDAtMzItMTkyIDAgMCAzMmMwIDE3LjctMTQuMyAzMi0zMiAzMmwtMzIgMGMtMTcuNyAwLTMyLTE0LjMtMzItMzJsMC0zMmMtMTcuNyAwLTMyLTE0LjMtMzItMzJsMC0xNjBjLTE3LjcgMC0zMi0xNC4zLTMyLTMybDAtNjRjMC0xNy43IDE0LjMtMzIgMzItMzJjMCAwIDAgMCAwIDBsMC0zMnMwIDAgMCAwbDAtMTZDNjQgMzUuMiAxNTMuNiAwIDI4OCAwek0xMjggMTYwbDAgOTZjMCAxNy43IDE0LjMgMzIgMzIgMzJsMTEyIDAgMC0xNjAtMTEyIDBjLTE3LjcgMC0zMiAxNC4zLTMyIDMyek0zMDQgMjg4bDExMiAwYzE3LjcgMCAzMi0xNC4zIDMyLTMybDAtOTZjMC0xNy43LTE0LjMtMzItMzItMzJsLTExMiAwIDAgMTYwek0xNDQgNDAwYTMyIDMyIDAgMSAwIDAtNjQgMzIgMzIgMCAxIDAgMCA2NHptMjg4IDBhMzIgMzIgMCAxIDAgMC02NCAzMiAzMiAwIDEgMCAwIDY0ek0zODQgODBjMC04LjgtNy4yLTE2LTE2LTE2TDIwOCA2NGMtOC44IDAtMTYgNy4yLTE2IDE2czcuMiAxNiAxNiAxNmwxNjAgMGM4LjggMCAxNi03LjIgMTYtMTZ6Ii8+PC9zdmc+"
+						src: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIiB3aWR0aD0iNTcuNiIgaGVpZ2h0PSI1MS4yIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTI4OCAwQzQyMi40IDAgNTEyIDM1LjIgNTEyIDgwbDAgMTYgMCAzMmMxNy43IDAgMzIgMTQuMyAzMiAzMmwwIDY0YzAgMTcuNy0xNC4zIDMyLTMyIDMybDAgMTYwYzAgMTcuNy0xNC4zIDMyLTMyIDMybDAgMzJjMCAxNy43LTE0LjMgMzItMzIgMzJsLTMyIDBjLTE3LjcgMC0zMi0xNC4zLTMyLTMybDAtMzItMTkyIDAgMCAzMmMwIDE3LjctMTQuMyAzMi0zMiAzMmwtMzIgMGMtMTcuNyAwLTMyLTE0LjMtMzItMzJsMC0zMmMtMTcuNyAwLTMyLTE0LjMtMzItMzJsMC0xNjBjLTE3LjcgMC0zMi0xNC4zLTMyLTMybDAtNjRjMC0xNy43IDE0LjMtMzIgMzItMzJjMCAwIDAgMCAwIDBsMC0zMnMwIDAgMCAwbDAtMTZDNjQgMzUuMiAxNTMuNiAwIDI4OCAwek0xMjggMTYwbDAgOTZjMCAxNy43IDE0LjMgMzIgMzIgMzJsMTEyIDAgMC0xNjAtMTEyIDBjLTE3LjcgMC0zMiAxNC4zLTMyIDMyek0zMDQgMjg4bDExMiAwYzE3LjcgMCAzMi0xNC4zIDMyLTMybDAtOTZjMC0xNy43LTE0LjMtMzItMzItMzJsLTExMiAwIDAgMTYwek0xNDQgNDAwYTMyIDMyIDAgMSAwIDAtNjQgMzIgMzIgMCAxIDAgMCA2NHptMjg4IDBhMzIgMzIgMCAxIDAgMC02NCAzMiAzMiAwIDEgMCAwIDY0ek0zODQgODBjMC04LjgtNy4yLTE2LTE2LTE2TDIwOCA2NGMtOC44IDAtMTYgNy4yLTE2IDE2czcuMiAxNiAxNiAxNmwxNjAgMGM4LjggMCAxNi03LjIgMTYtMTZ6Ii8+PC9zdmc+'
+					})
                     })
-                }),
-            ]
+			];
 
             feature.setStyle(busStyle);
 
@@ -173,22 +172,22 @@
         // These are style declarations.
         const stopFill = new Fill({
             color: 'rgba(255,255,255,0.4)'
-        })
+		});
 
         const stopStoke = new Stroke({
             color: '#3399CC',
             width: 1.25
-        })
+		});
 
         const stopStyle = new Style({
             image: new Circle({
                 fill: stopFill,
                 stroke: stopStoke,
-                radius: 5,
+				radius: 5
             }),
             fill: stopFill,
-            stroke: stopStoke,
-        })
+			stroke: stopStoke
+		});
 
         // Fetch our static data
         routes = await fetchRoutes();
